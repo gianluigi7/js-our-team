@@ -33,4 +33,10 @@ const team = [
     },
 ];
 
-console.log(team);
+ for (let i = 0; i < team.length; i++) {
+    const member = team[i];
+
+    for (let key in member) {
+        console.log(member[key]);
+    }
+ }
