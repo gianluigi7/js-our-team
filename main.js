@@ -9,7 +9,7 @@ const team = [
     {
       nome: 'Angela Carrol',
       ruolo: 'Chief Editor',
-      foto: 'img/img/angela-lopez-social-media-manager.jpg',
+      foto: 'img/img/angela-caroll-chief-editor.jpg',
     },
     {
       nome: 'Angela Lopez',
@@ -33,10 +33,32 @@ const team = [
     },
 ];
 
- for (let i = 0; i < team.length; i++) {
-    const member = team[i];
+// for (let i = 0; i < team.length; i++) {
+//    const member = team[i];
+//
+ //   for (let key in member) {
+ //       console.log(member[key]);
+ //   }
+ //}
 
-    for (let key in member) {
-        console.log(member[key]);
-    }
+ const ul = document.getElementById('list'); 
+ 
+ for (let i = 0; i < team.length; i++) {
+     const member = team[i];
+
+     const liEl = document.createElement('li');
+
+     const memberName = document.createElement('h2');
+     memberName.innerText = member.nome;
+
+     const memberRole = document.createElement('h3');
+     memberRole.innerText = member.ruolo;
+
+     const memberImg = document.createElement('img');
+     memberImg.src = member.foto;
+
+     ul.append(liEl);
+     liEl.append(memberName);
+     liEl.append(memberRole);
+     liEl.append(memberImg);
  }
